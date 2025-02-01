@@ -13,11 +13,12 @@
             background-color: #f4f4f4;
         }
         .calculator {
+            color: white;
             width: 250px;
-            background: #fff;
+            background: #070624;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(236, 255, 237, 0.1);
             text-align: center;
         }
         .display {
@@ -28,7 +29,7 @@
             padding: 10px;
             margin-bottom: 10px;
             border: none;
-            background: #f8f8f8;
+            background: #2d3854;
         }
         .buttons {
             display: grid;
@@ -39,17 +40,31 @@
             padding: 15px;
             font-size: 1.2em;
             border: none;
-            background: #ddd;
+            background: #3b0c33;
             cursor: pointer;
             border-radius: 5px;
+            color: wheat;
         }
         button:hover {
-            background: #bbb;
+            background: #ffc802;
+            color: white;
         }
+        #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
     <div class="calculator">
+        
         <input type="text" class="display" id="display" disabled>
         <div class="buttons">
             <button onclick="clearDisplay()">C</button>
